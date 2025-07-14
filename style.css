@@ -1,0 +1,78 @@
+
+.loading{
+  position:relative;
+  height:100px;
+  width:100px;
+  margin:20px auto 0;
+  animation:spin 2s linear infinite;
+}
+@keyframes spin{
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+.loading .circle{
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background-color:hotpink;
+  animation:animate 2s linear infinite;
+}
+.loading .circle:nth-child(2){
+  background-color:blue;
+  animation-delay:-1s;
+}
+
+@keyframes animate{
+  0%{
+    transform:scale(1);
+    transform-origin:left;
+  }
+  50%{
+    transform:scale(0);
+    transform-origin:left;
+  }
+  50.01%{
+    transform:scale(0);
+    transform-origin:right;
+  }
+  100%{
+    transform:scale(1);
+    transform-origin:right;
+  }
+}
+
+
+/* Second Loading */
+
+
+.loading2{
+  position:relative;
+  height:100px;
+  width:100px;
+  margin:20px auto 0;
+}
+
+.loading2 .circle{
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  border:5px solid;
+  border-color:white transparent white transparent;
+  animation:animate2 2s linear infinite;
+}
+@keyframes animate2{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+.loading2 .circle:nth-child(2){
+  border:5px solid;
+  border-color:transparent blue transparent blue;
+}
