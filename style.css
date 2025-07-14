@@ -76,3 +76,34 @@
   border:5px solid;
   border-color:transparent blue transparent blue;
 }
+
+/* Arrow Animation */
+.arrowAnimation span{
+    width:40px;
+    height:40px;
+    border-top:2px solid hotpink;
+    border-left:2px solid hotpink;
+    transform:rotate(45deg);
+    display:block;
+    animation:anim 2s linear infinite;
+    margin:-10px;
+}
+
+.arrowAnimation span:nth-child(2){
+    animation-delay:-0.2s;
+}
+
+.arrowAnimation span:nth-child(3){
+    animation-delay:-0.4s;
+}
+
+@keyframes anim{
+    0%,100%{
+        opacity:0;
+        transform:rotate(45deg) translate(0px,0px);
+    }
+    50%{
+        opacity:1;
+        transform:rotate(45deg) translate(-20px,-20px);
+    }
+}
